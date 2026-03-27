@@ -1,6 +1,6 @@
-import { checkAppointments } from ".";
+const baseCron = require('./base-cron'); 
 
-checkAppointments()
+baseCron.checkAppointments()
   .then(() => {
     console.log("Done");
     process.exit(0);
