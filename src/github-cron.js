@@ -1,3 +1,5 @@
+import { checkAppointments } from ".";
+
 checkAppointments()
   .then(() => {
     console.log("Done");
