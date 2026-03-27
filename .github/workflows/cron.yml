@@ -2,7 +2,7 @@ name: Run Cron Job
 
 on:
   schedule:
-    - cron: "*/1 * * * *"  # same as node-cron
+    - cron: "*/5 * * * *"  # same as node-cron
   workflow_dispatch:      # allows manual trigger
 
 jobs:
