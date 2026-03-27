@@ -23,3 +23,8 @@ jobs:
 
       - name: Run job
         run: node src/github-cron.js
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          API_TOKEN_HEADER: ${{ secrets.API_TOKEN_HEADER }}
+          APPOINTMENTS_API_URL: ${{ secrets.APPOINTMENTS_API_URL }}
+          BOOK_APPOINTMENT_ON_AVAILABLE: ${{ secrets.BOOK_APPOINTMENT_ON_AVAILABLE }}

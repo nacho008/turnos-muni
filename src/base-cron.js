@@ -7,10 +7,6 @@ require("dotenv").config();
 const REQUIRED_ENV = [
   "APPOINTMENTS_API_URL",
   "API_TOKEN",
-  "TWILIO_ACCOUNT_SID",
-  "TWILIO_AUTH_TOKEN",
-  "TWILIO_WHATSAPP_FROM",
-  "WHATSAPP_TO",
 ];
 
 for (const variableName of REQUIRED_ENV) {
@@ -23,7 +19,7 @@ for (const variableName of REQUIRED_ENV) {
 const POLL_CRON = process.env.POLL_CRON || "*/5 * * * *";
 const API_METHOD = (process.env.APPOINTMENTS_API_METHOD || "GET").toUpperCase();
 const API_TOKEN_HEADER = process.env.API_TOKEN_HEADER || "Authorization";
-const API_TOKEN_PREFIX = process.env.API_TOKEN_PREFIX || "Bearer ";
+const API_TOKEN_PREFIX = process.env.API_TOKEN_PREFIX;
 const API_TIMEOUT_MS = Number(process.env.API_TIMEOUT_MS || "15000");
 const API_JSON_BODY = parseJsonSafe(process.env.APPOINTMENTS_API_BODY || "");
 const API_EXTRA_HEADERS = parseJsonSafe(
