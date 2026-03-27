@@ -224,7 +224,7 @@ async function runBookingFlowOnce(availabilityData) {
   }
 }
 
-async function checkAppointments() {
+export async function checkAppointments() {
   if (isRunning) {
     console.log("Previous run still executing. Skipping this cycle.");
     return;
